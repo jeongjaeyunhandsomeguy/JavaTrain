@@ -3,12 +3,18 @@ package PHY.O910.bank;
 public class Account {
     private String accountNumber;
     private String name;
+    private int pw;
     private long balance;
 
-    public Account(String accountNumber, String name, long balance) {
+    public Account(String accountNumber, String name, long balance, int pw) {
         this.accountNumber = accountNumber;
         this.name = name;
         this.balance = balance;
+        this.pw=pw;
+    }
+
+    public int getPw() {
+        return pw;
     }
 
     public String getAccountNumber() {

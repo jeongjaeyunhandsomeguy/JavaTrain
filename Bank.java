@@ -33,16 +33,14 @@ public class Bank {
 
                 case 2:
                     System.out.println("＝＝＝＝口座照会＝＝＝＝");
-                    System.out.println("口座番号を入力してください。");
-                    System.out.print("口座番号 : ");
-                    String searchAcc = sc.nextLine();
+                    System.out.print("姓名 : ");
+                    String searchN = sc.nextLine();
                     boolean find = false;
                     for (Account acc : accounts) {
-                        if (acc.getAccountNumber().equals(searchAcc)) {
-                            System.out.println("名前を入力してください。");
-                            System.out.print("名前 : ");
-                            String searchName = sc.nextLine();
-                            if (acc.getName().equals(searchName)) {
+                        if (acc.getName().equals(searchN)) {
+                            System.out.print("暗証番号 : ");
+                            int searchP = sc.nextInt();
+                            if (acc.getPw()==searchP) {
                                 acc.print();
                                 find = true;
                                 break;
